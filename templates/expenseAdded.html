@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block content %}
+  <link rel="stylesheet" type="text/css" href="../static/css/cop4813-webdev-project3.webflow.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/webflow.css">
+  <header id="hero" class="hero">
+    <div class="flex-container w-container">
+      <div>
+        <p>Expense Added!</p>
+        <a href="{{ url_for('index') }}" class="button-8 w-button">Back to Homepage</a>
+      </div>
+    </div>
+  </header>
+
+{% endblock %}

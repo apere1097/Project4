@@ -1,0 +1,37 @@
+{% extends "template.html" %}
+{% block content %}
+
+  <link rel="stylesheet" type="text/css" href="../static/css/cop4813-webdev-project3.webflow.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/webflow.css">
+  <header id="hero" class="hero">
+      <a href="{{ url_for('index') }}" class="button-8 w-button">Back to Homepage</a>
+
+<br><br><br>
+    <div class="flex-container w-container">
+      <div>
+        <form method="post">
+        {{ form.csrf_token() }}
+            <p><b> Description </b></p>
+            <p> {{ form.description() }} </p>
+
+            <p><b> Category </b></p>
+            <p> {{ form.category() }} </p>
+
+            <p><b> Cost </b></p>
+            <p> {{ form.cost() }} </p>
+
+            <p><b> Currency </b></p>
+            <p> {{ form.currency() }} </p>
+
+            <p><b> Date </b></p>
+            <p> {{ form.date() }} </p> <br>
+
+        <input value="Submit" class="button-8 w-button" type="submit">
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+{% endblock %}
